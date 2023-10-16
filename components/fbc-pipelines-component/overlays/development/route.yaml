@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: fbc-pipelines-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fbc-pipelines-component
+    app.kubernetes.io/part-of: fbc-pipelines-aplication
+  name: fbc-pipelines-component8nc2
+spec:
+  port:
+    targetPort: 50051
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: fbc-pipelines-component
+    weight: 100
+status: {}
