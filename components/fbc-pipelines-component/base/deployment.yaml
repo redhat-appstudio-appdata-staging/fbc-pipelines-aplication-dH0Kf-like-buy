@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: fbc-pipelines-component
     spec:
       containers:
-      - image: fbc:latest
+      - image: quay.io/redhat-user-workloads-stage/dev-release-team-tenant/fbc-pipelines-aplication/fbc-pipelines-component@sha256:2dd4da50c7192cee1c012d457a64511db8e9c3e3e28dadcc34ff00d4a71c0e34
         name: fbc
         ports:
         - containerPort: 50051
